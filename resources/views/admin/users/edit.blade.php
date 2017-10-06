@@ -51,6 +51,14 @@
 			      </div>
 			    </div>
 			  {{Form::close()}}
+
+			  {{Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy',$user->id]])}}
+			  	<div class="form-group">        
+			      <div class="col-sm-offset-2 col-sm-10">
+			        {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+			      </div>
+			    </div>
+			  {{Form::close()}}
 		  </div>
 		  
 		  <div class="row">
